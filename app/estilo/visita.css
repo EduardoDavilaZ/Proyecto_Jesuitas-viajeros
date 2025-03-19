@@ -1,0 +1,131 @@
+:root {
+    --color1: #02689d;
+    --color2: #127dbe;
+    --color3: #282828;
+    --color4: #ffffff;
+}
+
+* {
+    font-family: Comic Sans MS;
+    color: var(--color4);
+}
+
+body{
+    background-color: var(--color3);
+}
+
+h1{
+    text-align: center;
+    font-size: 5vw;
+    margin: 2%;
+}
+
+main{
+    width: 70%;
+    background-color: var(--color1);
+    padding: 2%;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 20px;
+}
+
+label {
+    font-size: 2.5vw;
+    margin-left: 2%;
+}
+
+nav{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}
+
+nav img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px 0.5px var(--color4);
+}
+
+select{
+	width: 20%;
+    margin: 2%;
+    margin-left: 6%;
+    font-size: 2.5vw;
+    color: var(--color3);
+    border-radius: 10px;
+    border-color: var(--color1);
+}
+
+option{
+    color: var(--color3);
+}
+
+input[type=submit]{
+    display: block;
+    font-size: 2.5vw;
+    margin: auto;
+    margin-top: 4%;
+    border-radius: 10px;
+    border-color: var(--color3);
+    background-color: var(--color3);
+}
+
+input[type=submit]:hover{
+    background-color: var(--color2);
+    color: var(--color4);
+}
+
+a {
+	text-decoration: none;
+}
+
+a label{
+	padding: 0.6%;
+}
+
+a label:hover{
+	border-radius: 60px;
+	background-color: var(--color2);
+}
+
+nav img:hover{
+    box-shadow: 0px 0px 5px 0.5px var(--color2);
+}
+
+
+@media (max-width: 1000px) {
+    nav{
+        top: 6%;
+        right: 5%;
+    }
+    
+    nav img{
+        width: 14vw;
+        height: 14vw;
+    }
+    
+    h1{
+        font-size: 10vw;
+        margin: 2%;
+        
+    }
+    
+    main{
+        width: 80%;
+        margin-top: 45%;
+    }
+    
+    label {
+        font-size: 6vw;
+    }
+    
+    input[type=text], input[type=password]{
+        width: 85%;
+        font-size: 5vw;
+    }
+
+    input[type=submit]{
+        font-size: 6vw;
+    }
+}
