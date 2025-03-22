@@ -19,11 +19,11 @@
         <link rel="stylesheet" href="../estilo/visita.css">
     </head>
     <body>
-		<nav>
-			<a href="../jesuitas_ES/visita.php">
-				<img src="https://cdn-icons-png.flaticon.com/128/16022/16022729.png" alt="ES">
-			</a>
-		</nav>
+        <nav>
+            <a href="../jesuitas_ES/visita.php">
+                <img src="https://cdn-icons-png.flaticon.com/128/16022/16022729.png" alt="ES">
+            </a>
+        </nav>
         <main>
             <form method="POST" action="guardarVisita.php">
                 <h1>Welcome back <?php echo $nombre; ?></h1>

@@ -28,11 +28,11 @@
     <link rel="stylesheet" href="../estilo/visita.css">
 </head>
 <body>
-	<nav>
-		<a href="../jesuitas_ENG/validarUsuario.html">
-			<img src="https://cdn-icons-png.flaticon.com/128/323/323329.png" alt="ENG">
-		</a>
-	</nav>
+    <nav>
+        <a href="../jesuitas_ENG/validarUsuario.html">
+            <img src="https://cdn-icons-png.flaticon.com/128/323/323329.png" alt="ENG">
+        </a>
+    </nav>
     <main>
         <?php
             if ($resultado->num_rows > 0) { // Si la consulta fue exitosa, se permite el acceso a visita.php
