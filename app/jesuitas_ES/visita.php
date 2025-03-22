@@ -35,6 +35,7 @@
                         while($fila=$resultado->fetch_array()){
                             echo "<option value='" . $fila["ip"] . "'>" . $fila["lugar"] . "</option>";
                         }
+                        $conexion->close();
                     ?>
                 </select>
                 <input type="submit" name="Enviar">

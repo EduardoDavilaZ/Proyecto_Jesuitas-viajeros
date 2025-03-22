@@ -46,7 +46,7 @@
                         <label>Return to the form</label>
                     </a>";
             }
-			$conexion->close();
+            $conexion->close();
         ?>
     </main>
 </body>

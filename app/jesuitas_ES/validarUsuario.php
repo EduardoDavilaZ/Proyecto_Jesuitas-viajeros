@@ -46,6 +46,7 @@
                         <label>Regresar al formulario</label>
                     </a>";
             }
+            $conexion->close();
         ?>
     </main>
 </body>

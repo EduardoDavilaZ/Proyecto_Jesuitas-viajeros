@@ -39,7 +39,7 @@
                         <label>Vuelve a registrar tu visita</label>
                     </a>";
             }
-			$conexion->close();
+            $conexion->close();
         ?>
     </main>
 </body>
