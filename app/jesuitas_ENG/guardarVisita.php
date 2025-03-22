@@ -7,10 +7,10 @@
     include '../bd/conectarbd.php';
 	
     //Cadena de caracteres de la consulta sql	
-	$sql = "INSERT INTO visita (idJesuita, ip) VALUES (" . $idJesuita . ", '" . $ipLugar . "')";
-	
+    $sql = "INSERT INTO visita (idJesuita, ip) VALUES (" . $idJesuita . ", '" . $ipLugar . "')";
+
     //Ejecuta la consulta
-	$conexion->query($sql);
+    $conexion->query($sql);
 ?>
 
 <!DOCTYPE html>

@@ -12,9 +12,9 @@
     if ($resultado->num_rows > 0) { // Si la consulta fue exitosa, se envía los datos a $_SESSION
         session_start();
 		
-		$fila = $resultado->fetch_array();
-		$idJesuita = $fila["idJesuita"];
-		
+        $fila = $resultado->fetch_array();
+        $idJesuita = $fila["idJesuita"];
+
         $_SESSION["idJesuita"] = $idJesuita;
         $_SESSION["nombre"] = $nombre;
     }
