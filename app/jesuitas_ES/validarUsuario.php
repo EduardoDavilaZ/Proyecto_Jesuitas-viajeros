@@ -18,20 +18,6 @@
         $_SESSION["idJesuita"] = $idJesuita;
         $_SESSION["nombre"] = $nombre;
     }
-
-    function regresar() {
-        echo "<h1>Usuario inválido</h1>
-            <a href='jesuitas.html'>
-                <label>Regresar al formulario</label>
-            </a>";
-    }
-
-    function visita() {
-        echo "<h1>Bienvenid@</h1>
-            <a href='visita.php'>
-                <label>Empieza a registrar visitas</label>
-            </a>";
-    }
 ?>
 
 <!DOCTYPE html>
@@ -49,10 +35,16 @@
 	</nav>
     <main>
         <?php
-            if ($resultado->num_rows > 0) { 
-                visita(); // Ir a visitas
-            } else {
-                regresar(); // Regresar al formulario de jesuitas
+            if ($resultado->num_rows > 0) { // Si la consulta fue exitosa, se permite el acceso a visita.php
+                echo "<h1>Bienvenid@</h1>
+                    <a href='visita.php'>
+                        <label>Empieza a registrar visitas</label>
+                    </a>";
+            } else { // Sino, se retorna al formulario jesuitas.html
+                echo "<h1>Usuario inválido</h1>
+                    <a href='jesuitas.html'>
+                        <label>Regresar al formulario</label>
+                    </a>";
             }
         ?>
     </main>

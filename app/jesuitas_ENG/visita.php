@@ -5,10 +5,10 @@
     include '../bd/conectarbd.php';
 	
     //Obtener nombre del jesuita para visualizarlo
-    $sql = "SELECT nombreAlumno FROM jesuita WHERE idJesuita = " . $idJesuita . ";";
+    $sql = "SELECT nombre FROM jesuita WHERE idJesuita = " . $idJesuita . ";";
     $resultado = $conexion->query($sql);
     $fila = $resultado->fetch_array();
-    $nombre = $fila["nombreAlumno"];
+    $nombre = $fila["nombre"];
 ?>
 
 <!DOCTYPE html>

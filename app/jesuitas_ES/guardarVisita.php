@@ -8,26 +8,10 @@
 	
     //Cadena de caracteres de la consulta sql	
 	$sql = "INSERT INTO visita (idJesuita, ip) VALUES (" . $idJesuita . ", '" . $ipLugar . "')";
-	//echo $sql;
 	
     //Ejecuta la consulta
 	$conexion->query($sql);
-
-	function visita_exitosa() {
-        echo "<h1>Visita realizada</h1>
-				<a href='visita.php'>
-					<label>Registra más visitas!</label>
-				</a>";
-    }
-
-    function visita_fallida() {
-        echo "<h1>La visita no se ha realizado</h1>
-				<a href='visita.php'>
-					<label>Vuelve a registrar tu visita</label>
-				</a>";
-    }
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -45,9 +29,15 @@
     <main>
         <?php
             if ($conexion->affected_rows>0) {
-                visita_exitosa();
+                echo "<h1>Visita realizada</h1>
+                    <a href='visita.php'>
+                        <label>Registra más visitas!</label>
+                    </a>";
             } else {
-                visita_fallida();
+                echo "<h1>La visita no se ha realizado</h1>
+                    <a href='visita.php'>
+                        <label>Vuelve a registrar tu visita</label>
+                    </a>";
             }
 			$conexion->close();
         ?>
