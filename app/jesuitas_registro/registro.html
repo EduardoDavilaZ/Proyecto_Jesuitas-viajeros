@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrate</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../estilo/registro.css">
+    </head>
+    <body>
+        <main>
+            <form method="POST" action="introducirJesuita.php">
+                <h1>Jesuitas</h1>
+                <label>Codigo: </label>
+                <input type="password" name="codigo" maxlength="5" required>
+                
+                <label>Jesuita: </label>
+                <input type="text" name="nombre" maxlength="50" required>
+                
+                <label>Alumno: </label>
+                <input type="text" name="nombreAlumno" maxlength="100" required>
+                
+                <label>Firma <img src="https://cdn-icons-png.flaticon.com/128/16022/16022729.png" alt="ES">: </label>
+                <textarea name="firmaES" maxlength="300" required></textarea>
+                
+                <label>Firma <img src="https://cdn-icons-png.flaticon.com/128/323/323329.png" alt="ENG">: </label>
+                <textarea name="firmaENG" maxlength="300" required></textarea>
+                
+                <input type="submit" name="Enviar" value="Enviar">
+            </form>
+        </main>
+    </body>
+</html>
