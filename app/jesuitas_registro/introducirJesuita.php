@@ -9,26 +9,21 @@
     // Incluir la conexión a la base de datos
     include '../bd/conectarbd.php';
 	
-    $sql = "INSERT INTO jesuita (codigo, nombre, nombreAlumno, firmaES, firmaENG) VALUES (" .
+    $sql = "INSERT INTO jesuita (codigo, nombre, nombreAlumno, firma, firmaIngles) VALUES (" .
         "'" . $codigo . "', '" . $nombre . "','" . $nombreAlumno . "', " .
-        "'" . $firmaES . "','" . $firmaENG . "')";
-    
-    $resultado = $conexion->query($sql);
+        "'" . $firmaES . "','" . $firmaENG . "');";
+
+    $conexion->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Validate user</title>
+    <title>Introducir jesuita</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../estilo/visita.css">
 </head>
 <body>
-    <nav>
-        <a href="../jesuitas_ES/validarUsuario.php">
-            <img src="https://cdn-icons-png.flaticon.com/128/16022/16022729.png" alt="ES">
-        </a>
-    </nav>
     <main>
         <?php
             if ($conexion->affected_rows > 0) {
