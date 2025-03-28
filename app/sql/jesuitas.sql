@@ -1,6 +1,6 @@
 CREATE TABLE jesuita(
 	idJesuita tinyint unsigned  NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	codigo char(5) NULL, 
+	codigo char(60) NULL, 
 	nombre varchar(50) NOT NULL,
 	nombreAlumno varchar(100) NOT NULL,
 	firma varchar(300) NOT NULL,
@@ -22,14 +22,6 @@ CREATE TABLE visita(
 	CONSTRAINT Jesuita_Visita FOREIGN KEY (idJesuita) REFERENCES jesuita(idJesuita)
 );
 
-INSERT INTO jesuita (codigo, nombre, nombreAlumno, firma, firmaIngles)
-VALUES
-    ('ABC01', 'San Ignacio de Loyola', 'Eduardo', 'Me hice jesuita porque me gusta servir al prójimo', 'I became a Jesuit because I like to serve others'),
-    ('ABC02', 'San Francisco Javier','Carlos', 'Llevar la fe a todos los rincones del mundo', 'Bring faith to every corner of the world'),
-    ('ABC03', 'Matteo Ricci', 'Francisco', 'El conocimiento y la fe pueden ir de la mano', 'Knowledge and faith can go hand in hand'),
-    ('ABC04', 'Pedro Arrupe', 'Adrián', 'Ser hombres para los demás', 'Be men for others'),
-    ('ABC05', 'Baltasar Gracián', 'Fernando José', 'La prudencia es la guía de la vida', 'Prudence is the guide of life');
-	
 INSERT INTO lugar
 VALUES
     ('10.3.13.101', 'WIN-AI43-001', 'Badajoz'),

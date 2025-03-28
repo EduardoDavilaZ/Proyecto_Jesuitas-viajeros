@@ -1,4 +1,6 @@
 <?php
+    session_start(); // Iniciar la sesión desde el inicio
+
     // Obtener datos del formulario
     $nombre = $_POST["nombre"];
     $codigo = $_POST["codigo"];
@@ -14,12 +16,12 @@
 	    $fila = $resultado->fetch_array();
 	    $codigoHash = $fila["codigo"];
 	    if(password_verify($codigo, $codigoHash)){ // Si la contraseña es correcta, se guardan los datos en $_SESSION
-	        session_start();
 	        $_SESSION["idJesuita"] = $fila["idJesuita"];
 	        $_SESSION["nombre"] = $nombre;
 	    }
 	}
 ?>
+
 
 <!DOCTYPE html>
 <html>
