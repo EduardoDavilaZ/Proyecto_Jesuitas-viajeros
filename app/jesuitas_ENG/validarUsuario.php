@@ -7,21 +7,20 @@
 
     // Incluir la conexión a la base de datos
     include '../bd/conectarbd.php';
-	
-    // Obtener idJesuita y el código hasheado del usuario
-	$sql = "SELECT idJesuita, codigo FROM jesuita WHERE nombre = '" . $nombre . "'";
-	$resultado = $conexion->query($sql);
-	
-    if($resultado->num_rows > 0){ // Si la consulta es correcta, se obtiene el código hasheado
-	    $fila = $resultado->fetch_array();
-	    $codigoHash = $fila["codigo"];
-	    if(password_verify($codigo, $codigoHash)){ // Si la contraseña es correcta, se guardan los datos en $_SESSION
-	        $_SESSION["idJesuita"] = $fila["idJesuita"];
-	        $_SESSION["nombre"] = $nombre;
-	    }
-	}
-?>
 
+    // Obtener idJesuita y el código hasheado del usuario
+    $sql = "SELECT idJesuita, codigo FROM jesuita WHERE nombre = '" . $nombre . "'";
+    $resultado = $conexion->query($sql);
+
+    if($resultado->num_rows > 0){ // Si la consulta es correcta, se obtiene el código hasheado
+        $fila = $resultado->fetch_array();
+        $codigoHash = $fila["codigo"];
+        if(password_verify($codigo, $codigoHash)){ // Si la contraseña es correcta, se guardan los datos en $_SESSION
+            $_SESSION["idJesuita"] = $fila["idJesuita"];
+            $_SESSION["nombre"] = $nombre;
+        }
+    }
+?>
 
 <!DOCTYPE html>
 <html>
