@@ -15,9 +15,9 @@
             <form method="POST" action="validarUsuario.php">
                 <h1>Jesuits</h1>
                 <label>Name: </label>
-                <input type="text" name="nombre">
+                <input type="text" name="nombre" required>
                 <label>Code: </label>
-                <input type="password" name="codigo">
+                <input type="password" name="codigo" maxlength="5" required>
                 <input type="submit" name="enviar" value="Send">
             </form>
         </main>
