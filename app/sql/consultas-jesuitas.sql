@@ -103,16 +103,29 @@
 
 -- Busca una necesidad de consultas con la base de datos jesuitas y usa cada uno de los operadores. Tienes que poner los enunciados y también la solución.
 	-- AND
-		
+		-- Ver la visita de San Francisco Javier en León
+		SELECT jesuita.nombre, lugar.lugar
+		FROM visita
+		INNER JOIN lugar ON lugar.ip = visita.ip
+		INNER JOIN jesuita ON jesuita.idJesuita = visita.idJesuita
+		WHERE jesuita.idJesuita = 2 AND lugar.ip= '10.2.8.203';
 		
 	-- OR
+		-- Ver las visitas de dos ip
 		SELECT * FROM visita
 		WHERE ip = '10.3.13.101' OR ip = '10.2.8.203';
 	
 	-- NOT
-	
+		-- Ver las visitas que no sean de los idJesuita 1 y 3
+		SELECT *
+		FROM visita
+		WHERE NOT idJesuita IN (1, 3);
 	
 	-- IN
+		-- Ver la primera, la cuarta y la sexta visita
+		SELECT *
+		FROM visita
+		WHERE idVisita IN(1, 4, 6);
 	
 	-- BETWEEN
 		-- Mostrar los lugares con un rango de ip. 
@@ -143,4 +156,13 @@
 
 -- Todos los operadores se pueden negar, menos el IS (ya que se preguntaría por NOT NULL). Realiza consultas negando estos operadores, de nuevo tienes que poner los enunciados con su solución.
 
-
+	-- AND
+		
+	-- OR
+		-- Ver las visitas que no sean de Córdoba ni de San Francisco Javier
+		SELECT * FROM visita
+		WHERE NOT ip = '10.3.13.103' OR idJesuita = '2';
+	
+	-- IN
+	
+	-- BETWEEN
